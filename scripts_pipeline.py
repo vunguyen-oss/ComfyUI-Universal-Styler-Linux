@@ -65,7 +65,7 @@ class LoadScriptsFromDatabase:
         print(f"""YOUR FOLDER: {folder_paths.base_path}""")
 
         if not os.path.exists(agents_path):
-            print(f"""Error. No agents.csv found. Add your own agents.csv in the custom_nodes/ComfyUI-Universal-Styler directory of ComfyUI. Then press "Refresh".
+            print(f"""Error. No agents.csv found. Add your own agents.csv in the custom_nodes/ComfyUI-Universal-Styler-Linux directory of ComfyUI. Then press "Refresh".
                   Your current root directory is: {folder_paths.base_path}
             """)
             return agents
@@ -74,7 +74,7 @@ class LoadScriptsFromDatabase:
                 agents = [[x.replace('"', '').replace('\n','') for x in re.split(',(?=(?:[^"]*"[^"]*")*[^"]*$)', line)] for line in f.readlines()[1:]]
                 agents = {x[0]: [x[1],x[2]] for x in agents}
         except Exception as e:
-            print(f"""Error loading agents.csv. Make sure it is located into the custom_nodes/ComfyUI-Universal-Styler directory of ComfyUI. Then press "Refresh".
+            print(f"""Error loading agents.csv. Make sure it is located into the custom_nodes/ComfyUI-Universal-Styler-Linux directory of ComfyUI. Then press "Refresh".
                     Your current root directory is: {folder_paths.base_path}
                     Error: {e}
             """)
@@ -89,7 +89,7 @@ class LoadScriptsFromDatabase:
         """
         scenes = {"Error loading scenes.csv, check the console": ["",""]}
         if not os.path.exists(scenes_path):
-            print(f"""Error. No scenes.csv found. Add your own scenes.csv in the custom_nodes/ComfyUI-Universal-Styler directory of ComfyUI. Then press "Refresh".
+            print(f"""Error. No scenes.csv found. Add your own scenes.csv in the custom_nodes/ComfyUI-Universal-Styler-Linux directory of ComfyUI. Then press "Refresh".
                   Your current root directory is: {folder_paths.base_path}
             """)
             return scenes
@@ -98,7 +98,7 @@ class LoadScriptsFromDatabase:
                 scenes = [[x.replace('"', '').replace('\n','') for x in re.split(',(?=(?:[^"]*"[^"]*")*[^"]*$)', line)] for line in f.readlines()[1:]]
                 scenes = {x[0]: [x[1],x[2]] for x in scenes}
         except Exception as e:
-            print(f"""Error loading scenes.csv. Make sure it is located into the custom_nodes/ComfyUI-Universal-Styler directory of ComfyUI. Then press "Refresh".
+            print(f"""Error loading scenes.csv. Make sure it is located into the custom_nodes/ComfyUI-Universal-Styler-Linux directory of ComfyUI. Then press "Refresh".
                     Your current root directory is: {folder_paths.base_path}
                     Error: {e}
             """)
@@ -113,7 +113,7 @@ class LoadScriptsFromDatabase:
         """
         motions = {"Error loading motions.csv, check the console": ["",""]}
         if not os.path.exists(motions_path):
-            print(f"""Error. No motions.csv found. Add your own motions.csv in the custom_nodes/ComfyUI-Universal-Styler directory of ComfyUI. Then press "Refresh".
+            print(f"""Error. No motions.csv found. Add your own motions.csv in the custom_nodes/ComfyUI-Universal-Styler-Linux directory of ComfyUI. Then press "Refresh".
                   Your current root directory is: {folder_paths.base_path}
             """)
             return motions
@@ -122,7 +122,7 @@ class LoadScriptsFromDatabase:
                 motions = [[x.replace('"', '').replace('\n','') for x in re.split(',(?=(?:[^"]*"[^"]*")*[^"]*$)', line)] for line in f.readlines()[1:]]
                 motions = {x[0]: [x[1],x[2]] for x in motions}
         except Exception as e:
-            print(f"""Error loading motions.csv. Make sure it is located into the custom_nodes/ComfyUI-Universal-Styler directory of ComfyUI. Then press "Refresh".
+            print(f"""Error loading motions.csv. Make sure it is located into the custom_nodes/ComfyUI-Universal-Styler-Linux directory of ComfyUI. Then press "Refresh".
                     Your current root directory is: {folder_paths.base_path}
                     Error: {e}
             """)
@@ -137,7 +137,7 @@ class LoadScriptsFromDatabase:
         """
         lightings = {"Error loading lightings.csv, check the console": ["",""]}
         if not os.path.exists(lightings_path):
-            print(f"""Error. No lightings.csv found. Add your own lightings.csv in the custom_nodes/ComfyUI-Universal-Styler directory of ComfyUI. Then press "Refresh".
+            print(f"""Error. No lightings.csv found. Add your own lightings.csv in the custom_nodes/ComfyUI-Universal-Styler-Linux directory of ComfyUI. Then press "Refresh".
                   Your current root directory is: {folder_paths.base_path}
             """)
             return lightings
@@ -146,7 +146,7 @@ class LoadScriptsFromDatabase:
                 lightings = [[x.replace('"', '').replace('\n','') for x in re.split(',(?=(?:[^"]*"[^"]*")*[^"]*$)', line)] for line in f.readlines()[1:]]
                 lightings = {x[0]: [x[1],x[2]] for x in lightings}
         except Exception as e:
-            print(f"""Error loading lightings.csv. Make sure it is located into the custom_nodes/ComfyUI-Universal-Styler directory of ComfyUI. Then press "Refresh".
+            print(f"""Error loading lightings.csv. Make sure it is located into the custom_nodes/ComfyUI-Universal-Styler-Linux directory of ComfyUI. Then press "Refresh".
                     Your current root directory is: {folder_paths.base_path}
                     Error: {e}
             """)
@@ -161,7 +161,7 @@ class LoadScriptsFromDatabase:
         """
         styles = {"Error loading styles.csv, check the console": ["",""]}
         if not os.path.exists(styles_path):
-            print(f"""Error. No styles.csv found. Add your own styles.csv in the custom_nodes/ComfyUI-Universal-Styler directory of ComfyUI. Then press "Refresh".
+            print(f"""Error. No styles.csv found. Add your own styles.csv in the custom_nodes/ComfyUI-Universal-Styler-Linux directory of ComfyUI. Then press "Refresh".
                   Your current root directory is: {folder_paths.base_path}
             """)
             return styles
@@ -170,7 +170,7 @@ class LoadScriptsFromDatabase:
                 styles = [[x.replace('"', '').replace('\n','') for x in re.split(',(?=(?:[^"]*"[^"]*")*[^"]*$)', line)] for line in f.readlines()[1:]]
                 styles = {x[0]: [x[1],x[2]] for x in styles}
         except Exception as e:
-            print(f"""Error loading styles.csv. Make sure it is located into the custom_nodes/ComfyUI-Universal-Styler directory of ComfyUI. Then press "Refresh".
+            print(f"""Error loading styles.csv. Make sure it is located into the custom_nodes/ComfyUI-Universal-Styler-Linux directory of ComfyUI. Then press "Refresh".
                     Your current root directory is: {folder_paths.base_path}
                     Error: {e}
             """)
@@ -185,7 +185,7 @@ class LoadScriptsFromDatabase:
         """
         cameras = {"Error loading cameras.csv, check the console": ["",""]}
         if not os.path.exists(cameras_path):
-            print(f"""Error. No cameras.csv found. Add your own cameras.csv in the custom_nodes/ComfyUI-Universal-Styler directory of ComfyUI. Then press "Refresh".
+            print(f"""Error. No cameras.csv found. Add your own cameras.csv in the custom_nodes/ComfyUI-Universal-Styler-Linux directory of ComfyUI. Then press "Refresh".
                   Your current root directory is: {folder_paths.base_path}
             """)
             return cameras
@@ -194,7 +194,7 @@ class LoadScriptsFromDatabase:
                 cameras = [[x.replace('"', '').replace('\n','') for x in re.split(',(?=(?:[^"]*"[^"]*")*[^"]*$)', line)] for line in f.readlines()[1:]]
                 cameras = {x[0]: [x[1],x[2]] for x in cameras}
         except Exception as e:
-            print(f"""Error loading cameras.csv. Make sure it is located into the custom_nodes/ComfyUI-Universal-Styler directory of ComfyUI. Then press "Refresh".
+            print(f"""Error loading cameras.csv. Make sure it is located into the custom_nodes/ComfyUI-Universal-Styler-Linux directory of ComfyUI. Then press "Refresh".
                     Your current root directory is: {folder_paths.base_path}
                     Error: {e}
             """)
@@ -204,12 +204,12 @@ class LoadScriptsFromDatabase:
     
     @classmethod
     def INPUT_TYPES(cls):
-        cls.agents_csv = cls.load_agents_csv(os.path.join(folder_paths.base_path, "custom_nodes/ComfyUI-Universal-Styler/SCRIPTS/agents.csv"))
-        cls.scenes_csv = cls.load_scenes_csv(os.path.join(folder_paths.base_path, "custom_nodes/ComfyUI-Universal-Styler/SCRIPTS/scenes.csv"))
-        cls.motions_csv = cls.load_motions_csv(os.path.join(folder_paths.base_path, "custom_nodes/ComfyUI-Universal-Styler/SCRIPTS/motions.csv"))
-        cls.lightings_csv = cls.load_lightings_csv(os.path.join(folder_paths.base_path, "custom_nodes/ComfyUI-Universal-Styler/SCRIPTS/lightings.csv"))
-        cls.styles_csv = cls.load_styles_csv(os.path.join(folder_paths.base_path, "custom_nodes/ComfyUI-Universal-Styler/SCRIPTS/styles.csv"))
-        cls.cameras_csv = cls.load_cameras_csv(os.path.join(folder_paths.base_path, "custom_nodes/ComfyUI-Universal-Styler/SCRIPTS/cameras.csv"))
+        cls.agents_csv = cls.load_agents_csv(os.path.join(folder_paths.base_path, "custom_nodes/ComfyUI-Universal-Styler-Linux/SCRIPTS/agents.csv"))
+        cls.scenes_csv = cls.load_scenes_csv(os.path.join(folder_paths.base_path, "custom_nodes/ComfyUI-Universal-Styler-Linux/SCRIPTS/scenes.csv"))
+        cls.motions_csv = cls.load_motions_csv(os.path.join(folder_paths.base_path, "custom_nodes/ComfyUI-Universal-Styler-Linux/SCRIPTS/motions.csv"))
+        cls.lightings_csv = cls.load_lightings_csv(os.path.join(folder_paths.base_path, "custom_nodes/ComfyUI-Universal-Styler-Linux/SCRIPTS/lightings.csv"))
+        cls.styles_csv = cls.load_styles_csv(os.path.join(folder_paths.base_path, "custom_nodes/ComfyUI-Universal-Styler-Linux/SCRIPTS/styles.csv"))
+        cls.cameras_csv = cls.load_cameras_csv(os.path.join(folder_paths.base_path, "custom_nodes/ComfyUI-Universal-Styler-Linux/SCRIPTS/cameras.csv"))
         return {
             "required": {
                 "channel_input": ("STRING", {"forceInput": True}),
